@@ -1,12 +1,25 @@
 package com.market.sweettime.adapter;
 
+import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.market.sweettime.bean.PhotoBean;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.ViewHolder> {
+
+    List<PhotoBean> list;
+    Context context;
+    public PhotoAdapter(Context context,List<PhotoBean> list){
+        this.context = context;
+        this.list = list;
+    }
     @NonNull
     @Override
     public PhotoAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -19,7 +32,7 @@ public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.ViewHolder> 
     }
     @Override
     public int getItemCount() {
-        return 0;
+        return list.size();
     }
 
     class ViewHolder extends RecyclerView.ViewHolder{
