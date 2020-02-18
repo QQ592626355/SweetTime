@@ -7,16 +7,15 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.market.sweettime.bean.PhotoBean;
+import com.market.sweettime.bean.NewDirectoryBean;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.ViewHolder> {
 
-    List<PhotoBean> list;
+    List<NewDirectoryBean> list;
     Context context;
-    public PhotoAdapter(Context context,List<PhotoBean> list){
+    public PhotoAdapter(Context context,List<NewDirectoryBean> list){
         this.context = context;
         this.list = list;
     }

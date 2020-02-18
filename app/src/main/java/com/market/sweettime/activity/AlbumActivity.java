@@ -8,8 +8,9 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.market.sweettime.R;
+import com.market.sweettime.base.BaseActivity;
 
-public class AlbumActivity extends AppCompatActivity implements View.OnClickListener{
+public class AlbumActivity extends BaseActivity implements View.OnClickListener{
 
     CardView photo,talk;
 
@@ -21,8 +22,8 @@ public class AlbumActivity extends AppCompatActivity implements View.OnClickList
     }
 
     public void initView(){
-        photo=findViewById(R.id.photo);
-        talk=findViewById(R.id.talk);
+        photo= findViewById(R.id.photo);
+        talk= findViewById(R.id.talk);
         photo.setOnClickListener(this);
         talk.setOnClickListener(this);
     }
